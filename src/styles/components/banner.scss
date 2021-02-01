@@ -1,14 +1,15 @@
 .main {
-  height: 50vh; //fallback option
-  height: calc(var(--vh, 1vh) * 50);
-  background-color: $white;
+  height: 77vh; //fallback option
+  height: calc(var(--vh, 1vh) * 77);
+  //background-color: $white;
+  //background-color: pink;
   .row {
     flex-direction: column;
     justify-content: center;
     h2 {
       font-size: 3rem;
-      line-height: 4.2rem;
-      font-weight: 700;
+      line-height: 4rem;
+      font-weight: 400;
       z-index: 10;
       color: $white;
       mix-blend-mode: difference;
@@ -23,14 +24,15 @@
       }
       .line {
         margin-bottom: 8px;
-        height: 56px;
+        height: 60px;
         position: relative;
         overflow: hidden;
         @include media("<=tablet") {
-          height: 48px;
+          height: 55px;
         }
         @include media("<=phone") {
-          height: 32px;
+          height: 34px;
+          color: red;
         }
         span {
           position: absolute;
@@ -38,16 +40,24 @@
       }
     }
     .btn-row {
-      width: 256px;
+      width: 100%;
       position: relative;
       z-index: 2;
+      &:before {
+        position: absolute;
+        content: "";
+        width: 56px;
+        height: 3px;
+        background: $nColor;
+        top: 50%;
+        left: -68px;
+      }
       a {
         font-size: 1.6rem;
         color: $black;
         text-decoration: none;
-        display: flex;
-        align-items: center;
-        font-weight: 600;
+        //display: flex;
+        //align-items: center;
         @include media("<=tablet") {
           font-size: 1.3rem;
         }
@@ -62,6 +72,7 @@
           width: 24px;
           border-radius: 100px;
           transition: 0.4s ease-in-out;
+
           @include media("<=tablet") {
             padding: 6px;
             width: 20px;

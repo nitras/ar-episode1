@@ -7,7 +7,8 @@ nav {
   display: none;
   position: fixed;
   overflow: hidden;
-  background: $yellow;
+  background: $nColor;
+  
   a {
     position: relative;
     &:after {

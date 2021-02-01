@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
-@import "./varibles.scss";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import "./variables.scss";
 @import "./breakpoints.scss";
 @import "./components/header.scss";
 @import "./components/banner.scss";
@@ -9,13 +9,11 @@
 body,
 html {
   visibility: hidden;
-  user-select: none;
+  //user-select: none;
   background: $white;
   overscroll-behavior: none;
   margin: 0;
-  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "DM Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,12 +37,63 @@ html {
   }
   .row {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     height: 100%;
     padding: 0 32px;
+
     @include media("<=phone") {
       padding: 0 16px;
     }
   }
+  // .column {
+  //   display: flex;
+  //   flex-direction: column;
+  //   flex-basis: 100%;
+  //   flex: 1;
+  //   @include media("<=tablet") {
+  //     .column {
+  //       flex: 1;
+  //     }
+  //   }
+  // }
+
+  // .double-column {
+  //   display: flex;
+  //   flex-direction: column;
+  //   flex-basis: 100%;
+  //   flex: 2;
+  //   @include media("<=tablet") {
+  //     .double-column {
+  //       flex: 2;
+  //     }
+  //   }
+  // }
+
+  .blue {
+    background-color: blue;
+    color: white;
+    height: 500px;
+    padding: 20px;
+  }
+  .red {
+    background-color: red;
+    color: white;
+    height: 500px;
+    padding: 20px;
+  }
+
+  .orange {
+    background-color: orange;
+    color: white;
+    height: 500px;
+    padding: 20px;
+  }
+  .services-section {
+    //margin-top: 200px;
+    display: flex;
+  }
+
   .v-center {
     align-items: center;
   }
@@ -65,15 +114,15 @@ html {
 // intro overlay
 .intro-overlay {
   .top {
-    height: 50vh;
-    height: calc(var(--vh, 1vh) * 50);
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     position: absolute;
     width: 100%;
     z-index: 8;
     .overlay-top {
       position: absolute;
       height: 100%;
-      width: 33.333vw;
+      width: 100vw;
       background: $black;
       bottom: 0;
       left: 0;
@@ -146,4 +195,45 @@ html {
     display: flex;
     align-items: center;
   }
+}
+
+#logo-svg,
+.logo {
+  //mix-blend-mode: difference !important;
+}
+
+.st0 {
+  //opacity: 0;
+  fill: $black;
+}
+
+//logo
+
+.kader {
+  fill: pink;
+}
+.bottom-driehoek {
+  //fill: pink;
+}
+.kader,
+.top-driehoek,
+.bottom-driehoek {
+  //fill: $white !important;
+  //fill: $black !important;
+  //mix-blend-mode: difference !important;
+}
+
+.diagonaal {
+  //fill: $black;
+  //fill: $nColor !important;
+  //mix-blend-mode: difference !important;
+  //transition: 0.4s ease-in-out;
+  //&:hover {
+  //fill: red;
+  //transition: 0.4s ease-in-out;
+  //}
+}
+.logoName {
+  font-size: 2px;
+  opacity: 0;
 }
